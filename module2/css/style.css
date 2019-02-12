@@ -1,6 +1,10 @@
 
+* {
+    border:     thin dashed;
+    box-sizing: border-box;
+}
+
 body * {
-    border:      thin dashed;
     font-family: Arial, Helvetica, sans-serif;
     margin:      0;
     padding:     0;
@@ -14,10 +18,13 @@ h1 {
 section {
     background-color: #ababab;
     margin:           5px;
+    height:           150px;
+    overflow:         hidden;
 }
 
 section:hover {
-    cursor: row-resize;
+    cursor:   ns-resize;
+    overflow: scroll;
 }
 
 section > div {
