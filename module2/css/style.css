@@ -1,13 +1,13 @@
 
 * {
-    border:     thin dashed;
-    box-sizing: border-box;
+    border:      thin dashed;
+    box-sizing:  border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body * {
-    font-family: Arial, Helvetica, sans-serif;
-    margin:      0;
-    padding:     0;
+    margin:  0;
+    padding: 0;
 }
 
 h1 {
@@ -18,28 +18,10 @@ h1 {
 section {
     background-color: #ababab;
     margin:           5px;
-    height:           150px;
-    overflow:         hidden;
 }
 
-section:hover {
-    cursor:   ns-resize;
-    overflow: scroll;
-}
-
-section > div {
+.header {
     text-align: right;
-}
-
-section > div > span {
-    font-size:     125%;
-    font-weight:   bold;
-    padding-left:  25px;
-    padding-right: 25px;
-}
-
-section > p {
-    margin: 5px;
 }
 
 #firstHeader {
@@ -52,4 +34,25 @@ section > p {
 
 #thirdHeader {
     background-color: #f0b020;
+}
+
+.content {
+    height:   150px;
+    overflow: hidden;
+}
+
+.content:hover {
+    cursor:   ns-resize;
+    overflow: auto;
+}
+
+section > div > span {
+    font-size:     125%;
+    font-weight:   bold;
+    padding-left:  25px;
+    padding-right: 25px;
+}
+
+section p {
+    margin: 5px;
 }
