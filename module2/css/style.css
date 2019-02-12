@@ -26,8 +26,8 @@ section {
     background-color: #ababab;
     border:           1px solid #000000;
     float:            left;
-    margin:           0.16%;
-    width:            33%;
+    margin:           1%;
+    width:            31.33%;
 }
 
 section span {
@@ -71,13 +71,13 @@ section p {
 @media (min-width: 768px) and (max-width: 991px) {
 
     #sectionOne, #sectionTwo {
-        margin: 0.50%;
-        width:  49%;
+        margin: 1%;
+        width:  48%;
     }
 
     #sectionThree {
-        margin: 0.50%;
-        width:  99%;
+        margin: 1%;
+        width:  98%;
     }
 
 }
@@ -89,7 +89,7 @@ section p {
     body > h1 {
         font-family: "Times New Roman", Times, serif;
         font-size:   125%;
-        margin-left: 0.66%;
+        margin-left: 1%;
         text-align:  left;
     }
 
@@ -98,8 +98,8 @@ section p {
     }
 
     section {
-        margin: 0.50%;
-        width:  99%;
+        margin: 1%;
+        width:  98%;
     }
 
     section span {
