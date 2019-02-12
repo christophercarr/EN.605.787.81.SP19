@@ -1,0 +1,40 @@
+
+body * {
+    border: thin dashed;
+}
+
+h1 {
+    font-size:  175%;
+    text-align: center;
+}
+
+section {
+    background-color: #ababab;
+    margin:           5px;
+}
+
+section > div {
+    text-align: right;
+}
+
+section > div > span {
+    font-size:     125%;
+    padding-left:  25px;
+    padding-right: 25px;
+}
+
+section > p {
+    margin: 5px;
+}
+
+#firstHeader {
+    background-color: #f0a0f0;
+}
+
+#secondHeader {
+    background-color: #ff0000;
+}
+
+#thirdHeader {
+    background-color: #f0b020;
+}
