@@ -17,10 +17,9 @@ h1 {
 
 section {
     background-color: #ababab;
+    float:            left;
     margin:           0.16%;
-
-    float: left;
-    width: 33%;
+    width:            33%;
 }
 
 section span {
