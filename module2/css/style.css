@@ -84,6 +84,25 @@ section p {
         width:  99%;
     }
 
+    section span {
+        text-align:    center;
+        width:         100%;
+        padding-left:  5px;
+        padding-right: 5px;
+    }
+
+    #firstHeader:after {
+        content: " has bland white meat from wings, thighs, and breast.";
+    }
+
+    #secondHeader:after {
+        content: " has red meat for tenderloins, roasts, and ground chuck.";
+    }
+
+    #thirdHeader:after {
+        content: " is usually raw fish, wrapped in rice and kelp.";
+    }
+
 }
 
 /*
@@ -93,10 +112,4 @@ TODO: JHU # 1 - In the mobile view only, the "Menu" title should disappear. Inst
                 It should be in a smaller and different family font than the original "Menu" title.
                 It should also be left aligned.
                 It's left edge should align to the edge of the first content box below.
-TODO: JHU # 3 - In mobile view only, the titles of each box (Chicken, Sushi, Beef) should fill up the entire width of the box (instead of just to part of it to the right as shown in mockups)
-                The text in the title box should be centered.
-                It should also consist of 10 different words. (You can come up with your own, say a description of the type of Chicken it is, etc.).
-                Make sure the title does not overlap the content in the box.
-                This setup (together with a normally large enough font) should cause the title not to fit on 1 line.
-                Make sure it wraps properly without overlapping the content of the box while still maintaining the same distance between the title and the beginning of the content in that box.
 */
