@@ -1,4 +1,6 @@
 
+/** - - - - - - - - - - Base Style(s) and Desktop / Large Screens - - - - - - - - - - - - **/
+
 * {
     border:      thin dashed;
     box-sizing:  border-box;
@@ -56,3 +58,45 @@ section span {
 section p {
     margin: 5px;
 }
+
+/** - - - - - - - - - - Medium / Tablet Screens - - - - - - - - - - - - **/
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    #sectionOne, #sectionTwo {
+        margin: 0.50%;
+        width:  49%;
+    }
+
+    #sectionThree {
+        margin: 0.50%;
+        width:  99%;
+    }
+
+}
+
+/** - - - - - - - - - - Small / Mobile Screens - - - - - - - - - - - - **/
+
+@media (max-width: 767px) {
+
+    section {
+        margin: 0.50%;
+        width:  99%;
+    }
+
+}
+
+/*
+TODO: WEB #13 - confirm the layouts compared to the mockups (spacing, borders, alignment, etc...)
+TODO: WEB #14 - set a black border on both the section and section title region that is 1px thick
+TODO: JHU # 1 - In the mobile view only, the "Menu" title should disappear. Instead, another title with words "Categories" should appear.
+                It should be in a smaller and different family font than the original "Menu" title.
+                It should also be left aligned.
+                It's left edge should align to the edge of the first content box below.
+TODO: JHU # 3 - In mobile view only, the titles of each box (Chicken, Sushi, Beef) should fill up the entire width of the box (instead of just to part of it to the right as shown in mockups)
+                The text in the title box should be centered.
+                It should also consist of 10 different words. (You can come up with your own, say a description of the type of Chicken it is, etc.).
+                Make sure the title does not overlap the content in the box.
+                This setup (together with a normally large enough font) should cause the title not to fit on 1 line.
+                Make sure it wraps properly without overlapping the content of the box while still maintaining the same distance between the title and the beginning of the content in that box.
+*/
