@@ -12,9 +12,13 @@ body * {
     padding: 0;
 }
 
-h1 {
+body > h1 {
     font-size:  175%;
     text-align: center;
+}
+
+body > h1:after {
+    content: "Our Menu";
 }
 
 section {
@@ -79,6 +83,17 @@ section p {
 
 @media (max-width: 767px) {
 
+    body > h1 {
+        font-family: "Times New Roman", Times, serif;
+        font-size:   125%;
+        margin:      0.66%;
+        text-align:  left;
+    }
+
+    body > h1:after {
+        content: "Categories";
+    }
+
     section {
         margin: 0.50%;
         width:  99%;
@@ -108,8 +123,4 @@ section p {
 /*
 TODO: WEB #13 - confirm the layouts compared to the mockups (spacing, borders, alignment, etc...)
 TODO: WEB #14 - set a black border on both the section and section title region that is 1px thick
-TODO: JHU # 1 - In the mobile view only, the "Menu" title should disappear. Instead, another title with words "Categories" should appear.
-                It should be in a smaller and different family font than the original "Menu" title.
-                It should also be left aligned.
-                It's left edge should align to the edge of the first content box below.
 */
