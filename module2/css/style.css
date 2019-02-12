@@ -18,10 +18,17 @@ h1 {
 section {
     background-color: #ababab;
     margin:           5px;
+
+    float: left;
+    width: 32%;
 }
 
-.header {
-    text-align: right;
+section span {
+    float:         right;
+    font-size:     125%;
+    font-weight:   bold;
+    padding-left:  25px;
+    padding-right: 25px;
 }
 
 #firstHeader {
@@ -37,6 +44,7 @@ section {
 }
 
 .content {
+    clear:    both;
     height:   150px;
     overflow: hidden;
 }
@@ -44,13 +52,6 @@ section {
 .content:hover {
     cursor:   ns-resize;
     overflow: auto;
-}
-
-section > div > span {
-    font-size:     125%;
-    font-weight:   bold;
-    padding-left:  25px;
-    padding-right: 25px;
 }
 
 section p {
