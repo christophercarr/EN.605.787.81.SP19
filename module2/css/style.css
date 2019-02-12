@@ -2,7 +2,6 @@
 /** - - - - - - - - - - Base Style(s) and Desktop / Large Screens - - - - - - - - - - - - **/
 
 * {
-    border:      thin dashed;
     box-sizing:  border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -23,12 +22,14 @@ body > h1:after {
 
 section {
     background-color: #ababab;
+    border:           1px solid #000000;
     float:            left;
     margin:           0.16%;
     width:            33%;
 }
 
 section span {
+    border:        1px solid #000000;
     float:         right;
     font-size:     125%;
     font-weight:   bold;
@@ -122,5 +123,4 @@ section p {
 
 /*
 TODO: WEB #13 - confirm the layouts compared to the mockups (spacing, borders, alignment, etc...)
-TODO: WEB #14 - set a black border on both the section and section title region that is 1px thick
 */
