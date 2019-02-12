@@ -30,7 +30,7 @@ section {
     width:            31.33%;
 }
 
-section span {
+section h2 {
     border:        1px solid #000000;
     float:         right;
     font-size:     125%;
@@ -102,7 +102,7 @@ section p {
         width:  98%;
     }
 
-    section span {
+    section h2 {
         text-align:    center;
         width:         100%;
         padding-left:  5px;
