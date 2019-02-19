@@ -1,7 +1,32 @@
 
 #header-nav {
-    background-color: #cccccc;
-    border:           0;
-    border-radius:    0;
-    padding:          0;
+    background-color: #d0d0d0;
+    border:                 0;
+    border-radius:          0;
+    padding:                0;
+}
+
+#sectionOne {
+    padding-left:  16px;
+    padding-right: 10px;
+}
+
+#sectionTwo {
+    padding-left:  13px;
+    padding-right: 13px;
+}
+
+#sectionThree {
+    padding-left:  10px;
+    padding-right: 16px;
+}
+
+.section-data {
+    background-color: #d0d0d0;
+    padding:              5px;
+    margin-bottom:        5px;
+}
+
+.navbar-brand > p > span, #top, .section-data h3 {
+    font-weight: bold;
 }
