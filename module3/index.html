@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 
-<html lang="la">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Our Menu</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -16,10 +16,26 @@
             <div class="navbar-brand">
               <p><span>Food, LLC</span></p>
             </div>
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-navbar" aria-expanded="false">
+              <span class="sr-only">Toggle Navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+          <div id="collapsable-navbar" class="collapse navbar-collapse">
+            <ul id="nav-list" class="nav navbar-nav navbar-right hidden-sm hidden-md hidden-lg text-center">
+              <li><a href="#sectionOne">   Chicken </a></li>
+              <li><a href="#sectionTwo">   Beef    </a></li>
+              <li><a href="#sectionThree"> Sushi   </a></li>
+            </ul>
           </div>
         </div>
       </nav>
     </header>
+
     <div class="container-fluid">
       <div class="text-center"><h1 id="top">Our Menu</h1></div>
       <div class="row">
@@ -226,5 +242,8 @@
         </div>
       </div>
     </div>
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

@@ -1,6 +1,7 @@
 
 #header-nav {
     background-color: #cccccc;
-    border-radius: 0;
-    border: 0;
+    border:           0;
+    border-radius:    0;
+    padding:          0;
 }
