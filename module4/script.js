@@ -65,7 +65,9 @@ for (var i = 0; i < names.length; i++) {
   }
 }
 
-function arrayMapFunction(name) {
+console.log("- - - - - - Map - - - - - -");
+
+function mapFunction(name) {
   var firstLetter = name.charAt(0).toLowerCase();
 
   if (firstLetter === 'j') {
@@ -75,12 +77,36 @@ function arrayMapFunction(name) {
   }
 }
 
-console.log("- - - - - - - - - - - -");
+const mapResults = names.map(mapFunction);
 
-const simpleResults = names.map(arrayMapFunction);
+for (i = 0; i < mapResults.length; i++) {
+  console.log(mapResults[i]);
+}
 
-for (i = 0; i < simpleResults.length; i++) {
-  console.log(simpleResults[i]);
+console.log("- - - - - - Reduce - - - - - -");
+
+var initialValue = { hello: [], bye: [] };
+
+function reduceFunction(accumulator, currentValue) {
+  var firstLetter = currentValue.charAt(0).toLowerCase();
+
+  if (firstLetter === 'j') {
+    accumulator.bye.push(byeSpeaker.speakSimple(currentValue));
+  } else {
+    accumulator.hello.push(helloSpeaker.speakSimple(currentValue));
+  }
+
+  return accumulator;
+}
+
+const reduceResults = names.reduce(reduceFunction, initialValue);
+
+for (i = 0; i < reduceResults.hello.length; i++) {
+  console.log(reduceResults.hello[i]);
+}
+
+for (i = 0; i < reduceResults.bye.length; i++) {
+  console.log(reduceResults.bye[i]);
 }
 
 })();
