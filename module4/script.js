@@ -65,4 +65,22 @@ for (var i = 0; i < names.length; i++) {
   }
 }
 
+function arrayMapFunction(name) {
+  var firstLetter = name.charAt(0).toLowerCase();
+
+  if (firstLetter === 'j') {
+    return byeSpeaker.speakSimple(name);
+  } else {
+    return helloSpeaker.speakSimple(name);
+  }
+};
+
+console.log("- - - - - - - - - - - -");
+
+const simpleResults = names.map(arrayMapFunction);
+
+for (i = 0; i < simpleResults.length; i++) {
+  console.log(simpleResults[i]);
+}
+
 })();

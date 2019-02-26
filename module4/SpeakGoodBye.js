@@ -31,6 +31,10 @@ SpeakGoodBye.prototype.speak = function(name) {
   console.log(speakWord + " " + name);
 };
 
+SpeakGoodBye.prototype.speakSimple = function(name) {
+  return(speakWord + " " + name);
+};
+
 // STEP 9: Expose the 'byeSpeaker' object to the global scope. Name it
 // 'byeSpeaker' on the global scope as well.
 // See Lecture 52, part 2
