@@ -73,7 +73,7 @@ function arrayMapFunction(name) {
   } else {
     return helloSpeaker.speakSimple(name);
   }
-};
+}
 
 console.log("- - - - - - - - - - - -");
 
