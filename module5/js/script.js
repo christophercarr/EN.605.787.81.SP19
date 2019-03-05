@@ -369,6 +369,8 @@ function buildAndShowAboutHTML (content) {
     content = insertProperty(content, "star" + empty, "fa fa-star-o");
   }
 
+  content = insertProperty(content, "starText", starCount + "-star rating");
+
   insertHtml("#main-content", content);
 }
 
