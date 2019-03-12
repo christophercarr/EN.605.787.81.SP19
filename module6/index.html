@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <style>
-      .emptyNote { font-size: 0.9em; font-style:  italic; }
-      .message   { font-size: 1.3em; font-weight: bold;   }
+      .emptyNote    { font-size: 0.9em; font-style:  italic; }
+      .message      { font-size: 1.3em; font-weight: bold;   }
+      .containsData { border-color: #00FF00; color: #00FF00; }
+      .missingData  { border-color: #FF0000; color: #FF0000; }
     </style>
   </head>
   <body>
@@ -15,6 +17,7 @@
       <h1>Lunch Checker</h1>
       <div class="form-group">
         <input id="lunch-menu" type="text" ng-model="inputListValue"
+               ng-class="{ 'containsData' : (outputMessage.indexOf('Enjoy') >= 0 || outputMessage.indexOf('Much') >= 0), 'missingData' : outputMessage.indexOf('Please') >= 0 }"
                placeholder="list comma separated dishes you usually have for lunch"
                class="form-control">
         <span class="emptyNote">Empty segments (those containing only white space) will not be counted.</span>
@@ -22,7 +25,7 @@
       <div class="form-group">
         <button class="btn btn-default" ng-click="submitList();">Check If Too Much</button>
       </div>
-      <div class="form-group message">
+      <div class="form-group message" ng-class="{ 'containsData' : (outputMessage.indexOf('Enjoy') >= 0 || outputMessage.indexOf('Much') >= 0), 'missingData' : outputMessage.indexOf('Please') >= 0 }">
         {{outputMessage}}
       </div>
     </div>
