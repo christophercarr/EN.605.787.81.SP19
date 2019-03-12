@@ -28,7 +28,20 @@
 
    // Used to split the input string into segments, using a comma "," as the separator.
    function getSegments(string) {
-      return isEmpty(string) ? [ ] : string.split(",");
+      if (isEmpty(string)) {
+         return [ ];
+      } else {
+         var splitValues = string.split(",");
+         var scrubbed    = [ ];
+
+         for (var index = 0; index < splitValues.length; index++) {
+            if (!isEmpty(splitValues[index].trim())) {
+               scrubbed.push(splitValues[index]);
+            }
+         }
+
+         return scrubbed;
+      }
    }
 
    // Determine the appropriate message, based on segment counts.
