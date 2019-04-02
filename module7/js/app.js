@@ -7,7 +7,8 @@
    angular.module('ShoppingListCheckOff',   [])
      .controller('ToBuyController',         ToBuyController)
      .controller('AlreadyBoughtController', AlreadyBoughtController)
-     .service('shoppingListService',        ShoppingListCheckOffService);
+     .service('shoppingListService',        ShoppingListCheckOffService)
+     .filter('extraDollars',                ExtraDollarsFilter);
 
    // ------------------------------------------------------------------------------------------------
 
@@ -15,18 +16,18 @@
       var service = this;
 
       var toBuyItems = [
-        { name: "Butter (1 Pound)",           quantity:  1 },
-        { name: "White Sugar (1 Pound)",      quantity:  2 },
-        { name: "Brown Sugar (1 Pound)",      quantity:  1 },
-        { name: "Eggs",                       quantity: 12 },
-        { name: "Vanilla Extract (1 Bottle)", quantity:  1 },
-        { name: "Flour (1 Pound)",            quantity:  5 },
-        { name: "Baking Soda (Box)",          quantity:  1 },
-        { name: "Baking Powder (Can)",        quantity:  1 },
-        { name: "Salt (Shaker)",              quantity:  1 },
-        { name: "Clove (Canister)",           quantity:  1 },
-        { name: "Cinnamon (Sticks)",          quantity:  3 },
-        { name: "Quick Oats (Pound)",         quantity:  5 }
+        { name: "Butter (1 Pound)",           quantity:  1, pricePerItem: 1.23 },
+        { name: "White Sugar (1 Pound)",      quantity:  2, pricePerItem: 2.34 },
+        { name: "Brown Sugar (1 Pound)",      quantity:  1, pricePerItem: 5.67 },
+        { name: "Eggs",                       quantity: 12, pricePerItem: 8.90 },
+        { name: "Vanilla Extract (1 Bottle)", quantity:  1, pricePerItem: 1.35 },
+        { name: "Flour (1 Pound)",            quantity:  5, pricePerItem: 7.91 },
+        { name: "Baking Soda (Box)",          quantity:  1, pricePerItem: 2.46 },
+        { name: "Baking Powder (Can)",        quantity:  1, pricePerItem: 8.02 },
+        { name: "Salt (Shaker)",              quantity:  1, pricePerItem: 1.11 },
+        { name: "Clove (Canister)",           quantity:  1, pricePerItem: 2.22 },
+        { name: "Cinnamon (Sticks)",          quantity:  3, pricePerItem: 3.33 },
+        { name: "Quick Oats (Pound)",         quantity:  5, pricePerItem: 4.44 }
       ];
 
       var boughtItems = [
@@ -75,6 +76,15 @@
       var controller = this;
 
       controller.items = shoppingListService.getBoughtItems();
+   }
+
+   // ------------------------------------------------------------------------------------------------
+
+   function ExtraDollarsFilter() {
+      return function (input) {
+         input = input || "";
+         return "$$" + input;
+      };
    }
 
    // ------------------------------------------------------------------------------------------------
