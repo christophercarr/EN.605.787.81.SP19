@@ -6,7 +6,8 @@
     // Define the overall module, controllers, and service for this app.
    angular.module('NarrowItDownApp',        [])
       .controller('NarrowItDownController', NarrowItDownController)
-      .service('menuSearchService',         MenuSearchService);
+      .service('menuSearchService',         MenuSearchService)
+      .directive('foundItems',              FoundItemsDirective);
 
    // ------------------------------------------------------------------------------------------------
 
@@ -42,7 +43,6 @@
                    }
                }
 
-               console.log("Found: ", foundItems);
                return foundItems;
            };
 
@@ -67,6 +67,19 @@
                controller.found = response;
            });
        };
+   }
+
+   // ------------------------------------------------------------------------------------------------
+
+   function FoundItemsDirective() {
+       var config = {
+           templateUrl: 'loader/find-items-template.html',
+           scope: {
+               list: '< resultList'
+           }
+       };
+
+       return config;
    }
 
    // ------------------------------------------------------------------------------------------------
