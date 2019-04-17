@@ -59,17 +59,23 @@
    function NarrowItDownController(menuSearchService) {
        var controller = this;
 
-       controller.searchTerm = "";
-       controller.found      = [];
+       controller.searchTerm  = "";
+       controller.found       = [];
+       controller.hasSearched = false;
 
        controller.beginSearch = function () {
            menuSearchService.getMatchedMenuItems(controller.searchTerm).then(function(response) {
-               controller.found = response;
+               controller.found       = response;
+               controller.hasSearched = true;
            });
        };
 
        controller.removeItem = function (itemIndex) {
            controller.found.splice(itemIndex, 1);
+       };
+
+       controller.isError = function () {
+           return controller.hasSearched && controller.found.length == 0;
        };
    }
 
@@ -79,8 +85,9 @@
        var config = {
            templateUrl: 'loader/find-items-template.html',
            scope: {
-               list:     '< resultList',
-               onRemove: '&'
+               list:       '< resultList',
+               onRemove:   '&',
+               checkError: '&'
            }
        };
 
