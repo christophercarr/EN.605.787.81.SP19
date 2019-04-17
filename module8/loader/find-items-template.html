@@ -1,5 +1,8 @@
 <div class="list-data">
-    <ul>
-        <li ng-repeat="item in list">{{ item.name }}, {{ item.short_name }}, {{ item.description }}</li>
-    </ul>
+  <ul>
+    <li ng-repeat="item in list">
+      {{ item.name }}, {{ item.short_name }}, {{ item.description }}
+      <button class="btn" ng-click="onRemove({index: $index});">Don't want this one!</button>
+    </li>
+  </ul>
 </div>

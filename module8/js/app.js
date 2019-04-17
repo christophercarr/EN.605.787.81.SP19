@@ -67,6 +67,10 @@
                controller.found = response;
            });
        };
+
+       controller.removeItem = function (itemIndex) {
+           controller.found.splice(itemIndex, 1);
+       };
    }
 
    // ------------------------------------------------------------------------------------------------
@@ -75,7 +79,8 @@
        var config = {
            templateUrl: 'loader/find-items-template.html',
            scope: {
-               list: '< resultList'
+               list:     '< resultList',
+               onRemove: '&'
            }
        };
 

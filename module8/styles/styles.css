@@ -53,3 +53,6 @@ input[type="text"] {
 .list-data {
   clear: both;
 }
+.list-data li {
+  margin: 5px;
+}

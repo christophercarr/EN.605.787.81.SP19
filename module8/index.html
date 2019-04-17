@@ -18,8 +18,7 @@
         <button class="btn btn-primary" ng-click="controller.beginSearch();">Narrow It Down For Me!</button>
       </div>
 
-      <!--  on-remove="...." -->
-      <found-items result-list="controller.found"></found-items>
+      <found-items result-list="controller.found" on-remove="controller.removeItem(index)"></found-items>
     </div>
     <script src="js/angular.min.js"></script>
     <script src="js/app.js"></script>
