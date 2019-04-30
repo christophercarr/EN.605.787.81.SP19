@@ -4,6 +4,6 @@
     'use strict';
 
     // Define the overall data module.
-    angular.module('data', []);
+    angular.module('data', []); // TODO: rename this file
 
 })(window);

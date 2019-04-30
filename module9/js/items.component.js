@@ -3,9 +3,9 @@
     // Prevent variables from leaking into the parent scope.
     'use strict';
 
-    // Define the category component for menu app.
-    angular.module('MenuApp').component('categoryList', {
-        templateUrl: 'template/category.html',
+    // Define the item component for menu app.
+    angular.module('MenuApp').component('itemList', {
+        templateUrl: 'template/item.html',
         bindings: {
             items: '<'
         }

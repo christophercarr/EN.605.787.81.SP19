@@ -1,0 +1,8 @@
+<ul>
+    <li class="item-bullet" ng-repeat="item in $ctrl.items">
+        ID:    {{ ::item.id         }},
+        Short: {{ ::item.short_name }},
+        Name:  {{ ::item.name       }}
+        <span class="item-details">{{ ::item.description }}</span>
+    </li>
+</ul>

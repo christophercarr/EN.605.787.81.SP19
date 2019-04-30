@@ -1,5 +1,8 @@
 <ul>
-    <li ng-repeat="item in $ctrl.items">
-        Index: {{ $index }}, ID: {{ ::item.id }}, Short: {{ ::item.short_name }}, Name: {{ ::item.name }}
+    <li class="item-bullet" ng-repeat="item in $ctrl.items">
+        ID:    {{ ::item.id   }},
+        Short: <a ui-sref="items({categoryShortName: item.short_name})">{{ ::item.short_name }}</a>,
+        Name:  {{ ::item.name }}
+        <span class="item-details">{{ ::item.special_instructions }}<span>
     </li>
 </ul>

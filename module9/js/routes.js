@@ -28,10 +28,23 @@
             .state('categories', {
                 url:         '/categories',
                 templateUrl: 'template/categories.html',
-                controller:  'menuAppController as controller',
+                controller:  'menuAppCategoryController as controller',
                 resolve: {
                     items: ['menuDataService', function (menuDataService) {
                         return menuDataService.getAllCategories();
+                    }]
+                }
+            })
+
+            // --------------------------------
+            // Show Items From A Given Category
+            .state('items', {
+                url:         '/items/{categoryShortName}',
+                templateUrl: 'template/items.html',
+                controller:  'menuAppItemController as controller',
+                resolve: {
+                    data: ['$stateParams', 'menuDataService', function ($stateParams, menuDataService) {
+                        return menuDataService.getItemsForCategory($stateParams.categoryShortName);
                     }]
                 }
             })

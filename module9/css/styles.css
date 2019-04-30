@@ -1,0 +1,14 @@
+
+.item-bullet {
+    margin: 10px;
+}
+
+.item-details {
+    font-size:  small;
+    font-style: italic;
+}
+
+.item-details:before {
+    content:     "\a";
+    white-space: pre;
+}
