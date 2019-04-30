@@ -1,4 +1,4 @@
-(function() {
+(function () {
 
     // Prevent variables from leaking into the parent scope.
     'use strict';
