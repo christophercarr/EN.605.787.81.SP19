@@ -4,7 +4,7 @@
     'use strict';
 
     // Define the item component for menu app.
-    angular.module('MenuApp').component('itemList', {
+    angular.module('MenuApp').component('items', {
         templateUrl: 'template/item.html',
         bindings: {
             items: '<'
