@@ -15,16 +15,22 @@
     <!-- include library source files here... -->
     <script src="lib/jquery-2.1.4.min.js"></script>
     <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+    <script src="lib/ng-file-upload/ng-file-upload-all.min.js"></script>
     <script src="lib/angular-mocks.js"></script>
 
     <!-- include app module  source files here... -->
     <script src="src/common/common.module.js"></script>
     <script src="src/public/public.module.js"></script>
-    <script src="src/restaurant.module.js"></script>
+
+    <!-- include app interceptor source files here... -->
+    <script src="src/common/loading/loading.interceptor.js"></script>
+
+    <!-- include app routing source files here... -->
+    <script src="src/public/public.routes.js"></script>
 
     <!-- include app widget source files here... -->
     <script src="src/common/loading/loading.component.js"></script>
-    <script src="src/common/loading/loading.interceptor.js"></script>
     <script src="src/common/menu.service.js"></script>
     <script src="src/public/account/account.service.js"></script>
     <script src="src/public/menu/menu.controller.js"></script>
@@ -32,10 +38,10 @@
     <script src="src/public/menu-item/menu-item.component.js"></script>
     <script src="src/public/menu-items/menu-items.controller.js"></script>
     <script src="src/public/my-info/my-info-controller.js"></script>
-    <script src="src/public/public.routes.js"></script>
     <script src="src/public/sign-up/sign-up.controller.js"></script>
 
     <!-- include spec files here... -->
+    <script src="src/public/sign-up/signup.controller.spec.js"></script>
   </head>
 
   <body>
