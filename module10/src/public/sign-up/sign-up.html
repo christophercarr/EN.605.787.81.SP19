@@ -1,29 +1,24 @@
 <form id='signUpForm' name='signUpForm' novalidate>
 
     <input type="text" name="firstName" placeholder="First Name" ng-model="signUpCtrl.firstName" required minlength="3" ng-maxlength="15">
-    {{ signUpCtrl.firstName }}
     <span ng-if="(signUpForm.firstName.$error.minlength || signUpForm.firstName.$error.required) && signUpForm.firstName.$touched">First name must be at least 3 characters long</span>
     <span ng-if="signUpForm.firstName.$error.maxlength && signUpForm.firstName.$touched">First name must not be longer than 15 characters</span>
     <br>
 
     <input type="text" name="lastName" placeholder="Last Name" ng-model="signUpCtrl.lastName" required minlength="3" ng-maxlength="15">
-    {{ signUpCtrl.lastName }}
     <span ng-if="(signUpForm.lastName.$error.minlength || signUpForm.lastName.$error.required) && signUpForm.lastName.$touched">Last name must be at least 3 characters long</span>
     <span ng-if="signUpForm.lastName.$error.maxlength && signUpForm.lastName.$touched">Last name must not be longer than 15 characters</span>
     <br>
 
     <input type="email" name="email" placeholder="Email" ng-model="signUpCtrl.email" required>
-    {{ signUpCtrl.email }}
     <span ng-if="signUpForm.email.$invalid && signUpForm.email.$touched">Must be a valid email address: handle@domain format</span>
     <br>
 
     <input type="text" name="phone" placeholder="Phone ###-###-####" ng-model="signUpCtrl.phone" required pattern="(\d{3})-(\d{3})-(\d{4})">
-    {{ signUpCtrl.phone }}
     <span ng-if="signUpForm.phone.$invalid && signUpForm.phone.$touched">Phone must be in the format ###-###-####.</span>
     <br>
 
     <input type="text" name="favoriteDish" placeholder="Favorite Dish" ng-model="signUpCtrl.favoriteDish">
-    {{ signUpCtrl.favoriteDish }}
     <span ng-if="signUpCtrl.invalidDish">No such menu number exists</span>
     <br>
 
