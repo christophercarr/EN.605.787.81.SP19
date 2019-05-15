@@ -9,11 +9,13 @@
     function SignUpController($http, ApiPath, AccountService) {
         var controller = this;
 
-        controller.firstName    = null;
-        controller.lastName     = null;
-        controller.email        = null;
-        controller.phone        = null;
-        controller.favoriteDish = null;
+        var existingInfo = AccountService.getInfo();
+
+        controller.firstName    = existingInfo.firstName;
+        controller.lastName     = existingInfo.lastName;
+        controller.email        = existingInfo.email;
+        controller.phone        = existingInfo.phone;
+        controller.favoriteDish = existingInfo.hasData ? existingInfo.favoriteDish.short_name : null;
         controller.invalidDish  = false;
         controller.infoSaved    = false;
 
