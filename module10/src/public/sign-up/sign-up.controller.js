@@ -19,6 +19,19 @@
         controller.invalidDish  = false;
         controller.infoSaved    = false;
 
+        controller.checkDish = function() {
+
+            var onSuccess = function (response) {
+                controller.invalidDish = false;
+            };
+
+            var onError = function (response) {
+                controller.invalidDish = true;
+            };
+
+            $http.get(ApiPath + '/menu_items/' + controller.favoriteDish + '.json').then(onSuccess, onError);
+        };
+
         controller.submit = function() {
 
             var onSuccess = function (response) {

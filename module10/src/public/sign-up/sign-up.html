@@ -18,7 +18,7 @@
     <span ng-if="signUpForm.phone.$invalid && signUpForm.phone.$touched">Phone must be in the format ###-###-####.</span>
     <br>
 
-    <input type="text" name="favoriteDish" placeholder="Favorite Dish" ng-model="signUpCtrl.favoriteDish">
+    <input type="text" name="favoriteDish" placeholder="Favorite Dish" ng-model="signUpCtrl.favoriteDish" ng-blur="signUpCtrl.checkDish()">
     <span ng-if="signUpCtrl.invalidDish">No such menu number exists</span>
     <br>
 
