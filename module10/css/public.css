@@ -183,3 +183,7 @@ h3.menu-item-title {
     width: 100%;
   }
 }
+
+#signUpForm input {
+  color: #000000;
+}
