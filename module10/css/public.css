@@ -187,3 +187,7 @@ h3.menu-item-title {
 #signUpForm input {
   color: #000000;
 }
+
+.favorite-photo {
+  margin-left: 0;
+}

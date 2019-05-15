@@ -10,6 +10,7 @@
         var service = this;
 
         service.account = {
+            hasData:      false,
             firstName:    null,
             lastName:     null,
             email:        null,
@@ -18,6 +19,7 @@
         };
 
         service.saveInfo = function (firstName, lastName, email, phone, favoriteDish) {
+            service.account.hasData      = true;
             service.account.firstName    = firstName;
             service.account.lastName     = lastName;
             service.account.email        = email;

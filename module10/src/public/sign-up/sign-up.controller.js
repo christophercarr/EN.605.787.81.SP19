@@ -20,7 +20,7 @@
         controller.submit = function() {
 
             var onSuccess = function (response) {
-                AccountService.saveInfo(controller.firstName, controller.lastName, controller.email, controller.phone, controller.favoriteDish);
+                AccountService.saveInfo(controller.firstName, controller.lastName, controller.email, controller.phone, response.data);
                 controller.invalidDish = false;
                 controller.infoSaved   = true;
             };

@@ -1,0 +1,40 @@
+<div ng-if="myInfoCtrl.accountInfo.hasData">
+    <table>
+        <tr>
+            <td>First Name:</td>
+            <td>{{ myInfoCtrl.accountInfo.firstName }}</td>
+        </tr>
+        <tr>
+            <td>Last Name:</td>
+            <td>{{ myInfoCtrl.accountInfo.lastName }}</td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>{{ myInfoCtrl.accountInfo.email }}</td>
+        </tr>
+        <tr>
+            <td>Phone:</td>
+            <td>{{ myInfoCtrl.accountInfo.phone }}</td>
+        </tr>
+    </table>
+
+    <div class="menu-item-tile">
+        <div class="menu-item-photo favorite-photo">
+            <div>{{ myInfoCtrl.accountInfo.favoriteDish.short_name }}</div>
+            <img class="img-responsive" width="250" height="150"
+                 ng-src="{{myInfoCtrl.basePath}}/images/{{myInfoCtrl.accountInfo.favoriteDish.short_name}}.jpg"
+                 alt="{{myInfoCtrl.accountInfo.favoriteDish.name}}">
+        </div>
+        <div class="menu-item-description">
+            <h3 class="menu-item-title">{{myInfoCtrl.accountInfo.favoriteDish.name}}</h3>
+            <p class="menu-item-details">{{myInfoCtrl.accountInfo.favoriteDish.description}}</p>
+        </div>
+    </div>
+
+</div>
+
+<div ng-if="!myInfoCtrl.accountInfo.hasData">
+    <span>
+        Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
+    </span>
+</div>
